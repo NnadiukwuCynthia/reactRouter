@@ -1,3 +1,18 @@
+/* fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Kanit&family=Rubik:ital,wght@0,500;1,300;1,500&display=swap');
+
+/* Color definition */
+:root{
+  --light_bgc: #dadada;
+  --dark_bgc: #04011a;
+  --light_text: #000;
+  --dark_text: #fff;
+  --activeLink-bgc: #7280e8;
+  --settingIcon-bgc: #fd7781;
+  --lightGreen-bgd: #45efb6;
+
+} 
+
 *{
   margin: 0;
   padding: 0;
@@ -8,11 +23,49 @@
 .MenuList{
   width: 15%;
   height: 100vh;
-  background-color: darkgray;
+  padding-top: 10px;
+  margin-right: 20px;
+  background-color: var(--light_bgc);
   display: flex;
   flex-direction: column;
   justify-content: start;
 }
 .MenuList a{
-  margin: 10px;
+  display: flex;
+  align-items: start;
+  font-family: 'Kanit', sans-serif;
+}
+.menuList{
+  padding: 10px;
+  color: var(--light_text);
+  text-decoration: none;
+  margin: 5px 0;
+}
+.active{
+  color: #fff;
+  padding: 15px 10px;
+  margin-left: 5px;
+  text-decoration: none;
+  color: var(--activeLink-bgc);
+  background-color: var(--dark_text);
+  border-left: 5px solid var(--activeLink-bgc);
+
+}
+.menuList:hover{
+  background-color: var(--activeLink-bgc);
+  color: var(--dark_text);
+  transition: .30s;
+}
+.menuIcons{
+  font-size: 18px;
+  padding-right: 10px;
+}
+@media screen and (max-width: 375px){
+  
+}
+@media screen and (max-width: 780px){
+  
+}
+@media screen and (max-width: 1069px){
+  
 }

@@ -1,20 +1,28 @@
 import { createBrowserRouter, createRoutesFromElements, Route , RouterProvider} from 'react-router-dom'
 import './App.css'
 import Root from './components/Root'
-import Home from  './components/Home'
-import Faq from './components/FAQ'
-import About from './components/About'
-import Contact from './components/Contact'
+import Dashboard from  './pages/Home'
+import Messages from './pages/Messages'
+import Contact from './pages/Contact'
+import Inventory from './pages/Inventory';
+import Setting from './pages/Setting';
+import Profile from './pages/Profile'
+import WorkOrders from './pages/WorkOrders'
+import Logout from './pages/Logout';
 
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path='/' element={<Root/>}>
-        <Route index path='/home' element={< Home/>} />
-        <Route path='/about' element={<About/>} />
+        <Route index path='/dashboard' element={< Dashboard/>} />
+        <Route path='/messages' element={<Messages/>} />
         <Route path='/contact' element={<Contact/>} />
-        <Route path='/faq' element={<Faq/>} />
+        <Route path='/workOrders' element={<WorkOrders/>} />
+        <Route path='/logout' element={<Logout/>} />
+        <Route path='/inventory' element={<Inventory/>} />
+        <Route path='/setting' element={<Setting/>} />
+        <Route path='/profile' element={<Profile/>} />
       </Route>
     )
   )
