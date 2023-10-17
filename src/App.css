@@ -5,14 +5,13 @@
 :root{
   --light_bgc: #dadada;
   --dark_bgc: #04011a;
-  --light_text: #000;
+  --light_text: #2c2b2b;
   --dark_text: #fff;
   --activeLink-bgc: #7280e8;
   --settingIcon-bgc: #fd7781;
   --lightGreen-bgd: #45efb6;
 
 } 
-
 *{
   margin: 0;
   padding: 0;
@@ -20,12 +19,28 @@
 .App{
   display: flex;
 }
-.MenuList{
-  width: 15%;
+.Main_Container{
+  width: 20%;
   height: 100vh;
   padding-top: 10px;
-  margin-right: 20px;
   background-color: var(--light_bgc);
+}
+.logo h2{
+  padding-bottom: 10px;
+  font-family: 'Croissant One', serif;
+  text-align: center;
+  color: var(--activeLink-bgc);
+}
+.hamburgerContainer{
+  padding: 10px 20px 10px 0;
+  display: flex;
+  justify-content: end;
+}
+.hamburger{
+  font-size: 20px;
+  color: var(--light_text);
+}
+.MenuList{
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -49,7 +64,6 @@
   color: var(--activeLink-bgc);
   background-color: var(--dark_text);
   border-left: 5px solid var(--activeLink-bgc);
-
 }
 .menuList:hover{
   background-color: var(--activeLink-bgc);
@@ -57,15 +71,75 @@
   transition: .30s;
 }
 .menuIcons{
-  font-size: 18px;
+  font-size: 24px;
   padding-right: 10px;
 }
-@media screen and (max-width: 375px){
-  
+.text_Container{
+  padding: 15px;
+}
+.text_Container h2{
+  padding-left: 35px;
+  color: var(--light_text);
+  font-family: 'kanit', sans-serif;
+}
+.maintenance_Container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.maintenance_div{
+  width: 250px;
+  height: 200px;
+  margin: 10px 10px 10px 40px;
+  background-color: var(--light_bgc);
+  border-radius: 20px;
+}
+.updateContainer{
+  width: 300px;
+  height: 200px;
+  margin: 10px 10px 10px 40px;
+  background-color: var(--light_bgc);
+  border-radius: 20px;
+}
+.RecentUpdate{
+  padding-bottom: 20px;
+}
+.RecentUpdate h3{
+  padding: 0 0 10px 40px;
+  color: var(--light_text);
+  font-family: 'Rubik', sans-serif;
+}
+.calendar_Container{
+  padding: 0 0 10px 50px;
+}
+.calendar_Container input{
+  width: 140px;
+  height: 20px;
+  padding: 5px;
+  border: unset;
+  border-radius: 5px;
+  background-color: var(--light_bgc);
+  font-family: 'Kanit', sans-serif;
+}
+.calendar_Container input:focus{
+  outline: unset;
+}
+@media screen and (max-width: 418px){
+  .maintenance_Container{
+    flex-direction: column;
+  }
+  .updateContainer{
+    width: 250px;
+    height: 200px;
+  }
 }
 @media screen and (max-width: 780px){
-  
+  .maintenance_Container{
+    flex-wrap: wrap;
+  }
 }
-@media screen and (max-width: 1069px){
-  
+@media screen and (max-width: 1339px){
+  .maintenance_Container{
+    flex-wrap: wrap;
+  }
 }

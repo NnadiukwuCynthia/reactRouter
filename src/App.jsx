@@ -1,7 +1,7 @@
 import { createBrowserRouter, createRoutesFromElements, Route , RouterProvider} from 'react-router-dom'
 import './App.css'
 import Root from './components/Root'
-import Dashboard from  './pages/Home'
+import Dashboard from  './pages/DashBoard'
 import Messages from './pages/Messages'
 import Contact from './pages/Contact'
 import Inventory from './pages/Inventory';
